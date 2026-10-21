@@ -1,0 +1,11 @@
+[versions]
+agp = "9.4.1"
+gamesActivity = "4.4.0"
+material = "1.10.0"
+
+[libraries]
+games-activity = { group = "androidx.games", name = "games-activity", version.ref = "gamesActivity" }
+material = { group = "com.google.android.material", name = "material", version.ref = "material" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }

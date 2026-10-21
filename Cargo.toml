@@ -1,0 +1,21 @@
+[package]
+name = "android_destroy_recreate_demo"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+bevy = {
+    git = "https://github.com/Johannes0021/bevy.git",
+    branch = "android-destroy-recreate",
+    default-features = false,
+    features = ["2d", "android-game-activity"],
+}
+
+[patch.crates-io]
+# To allow the recreation on winits side:
+# This is not my work I took it from:
+# https://github.com/rib/winit/commit/c28e425214e82bdb86dcdf89c9488554a18e24b2
+winit = {
+    git = "https://github.com/Johannes0021/winit.git",
+    branch = "android-destroy-recreate-v0.30.13",
+}
