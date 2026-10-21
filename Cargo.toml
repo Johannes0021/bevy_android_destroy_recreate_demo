@@ -4,11 +4,33 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+# Disable multi_threaded feature because on my testing devices:
+#
+# # Samsung Galaxy A33 (Android 16)
+# Setting device fps to 90 is not an issue for this simple app but for just slightly bigger apps
+# with more systems the fps are unstable which ist not a nice experience. Single-threaded it runs
+# smooth.
+#
+# # Samsung Galaxy S20 (Android 13)
+# Same issue as the device above just with 120 fps.
 bevy = {
     git = "https://github.com/Johannes0021/bevy.git",
     branch = "android-destroy-recreate",
     default-features = false,
-    features = ["2d", "android-game-activity"],
+    features = [
+        "2d_bevy_render",
+        "android-game-activity",
+        "default_app",
+
+        # default_platform
+        "std",
+        "bevy_winit",
+        #"multi_threaded",
+        "webgl2",
+        "x11",
+        "wayland",
+        "sysinfo_plugin",
+    ],
 }
 
 [profile.dev.package."*"]
