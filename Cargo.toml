@@ -24,6 +24,13 @@ debug = false
 incremental = false
 
 [patch.crates-io]
+# See
+# https://github.com/bevyengine/bevy/issues/16798
+# and https://github.com/rust-mobile/android-activity/issues/175
+android-activity = {
+    git = "https://github.com/Johannes0021/android-activity.git",
+    branch = "game-activity-patch-v0.6.1",
+}
 # To allow the recreation on winits side:
 # This is not my work I took it from:
 # https://github.com/rib/winit/commit/c28e425214e82bdb86dcdf89c9488554a18e24b2

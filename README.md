@@ -9,5 +9,8 @@ Build Android:
 ```sh
 export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 ./build_android.sh # Debug
-# ./build_android.sh relase feature0,feature1
+# ./build_android.sh release feature0,feature1
 ```
+
+# General issues on Android:
+See readme https://github.com/Johannes0021/bevy_mod_sdl3/blob/main/README.md
