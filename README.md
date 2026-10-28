@@ -13,4 +13,4 @@ export ANDROID_SDK_ROOT="$HOME/Android/Sdk"
 ```
 
 # General issues on Android:
-See readme https://github.com/Johannes0021/bevy_mod_sdl3/blob/main/README.md
+https://github.com/bevyengine/bevy/issues/26282

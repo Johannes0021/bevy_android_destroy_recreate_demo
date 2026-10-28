@@ -4,7 +4,10 @@ plugins {
 
 android {
     namespace = "com.example.android_destroy_recreate_demo"
-    compileSdk = 37
+
+    compileSdk {
+        version = release(37)
+    }
 
     defaultConfig {
         applicationId = "com.example.android_destroy_recreate_demo"
@@ -20,14 +23,17 @@ android {
     buildTypes {
         release {
             optimization {
-                enable = false
+                enable = true
+                packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
             }
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     //sourceSets {
     //    getByName("main") {
     //        assets {
